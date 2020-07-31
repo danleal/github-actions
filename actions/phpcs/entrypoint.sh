@@ -10,7 +10,7 @@ if [ ! -f composer.json ]; then
 fi
 
 echo 'Installing Composer packages'
-composer install
+composer install --no-scripts
 
 phpcs_package_exist() {
     composer show | grep squizlabs/php_codesniffer >/dev/null
@@ -23,6 +23,12 @@ else
     echo 'Installing PHP_CodeSniffer and WordPress CS'
     composer require dealerdirect/phpcodesniffer-composer-installer wp-coding-standards/wpcs
 fi
+
+echo 'Installing NextPress Coding Standards'
+composer require nextpress/nextpresscs --no-scripts
+
+echo 'Installing Coding Standards'
+composer run-script install-codestandards
 
 STANDARD=' --standard=WordPress --ignore=*/vendor/* --extensions=php'
 if [ -f .phpcs.xml ] || [ -f phpcs.xml ] || [ -f .phpcs.xml.dist ] || [ -f phpcs.xml.dist ]
