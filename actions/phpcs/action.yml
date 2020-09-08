@@ -1,6 +1,6 @@
 name: 'PHP_CodeSniffer Lint'
 description: 'Lint PHP Files'
-author: 'NextPress'
+author: 'Daniel Leal'
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -1,6 +1,6 @@
 name: 'ESLint'
 description: 'Lint JavaScript Files'
-author: 'NextPress'
+author: 'Daniel Leal'
 runs:
   using: 'docker'
   image: 'Dockerfile'

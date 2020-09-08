@@ -24,8 +24,8 @@ else
     composer require dealerdirect/phpcodesniffer-composer-installer wp-coding-standards/wpcs
 fi
 
-echo 'Installing NextPress Coding Standards'
-composer require nextpress/nextpresscs --no-scripts
+echo 'Installing WooDelivery Coding Standards'
+composer require danleal/woodeliverycs --no-scripts
 
 echo 'Installing Coding Standards'
 composer run-script install-codestandards
